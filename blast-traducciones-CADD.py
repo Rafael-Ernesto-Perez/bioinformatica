@@ -57,3 +57,22 @@ alignment = alignments[0]
 print("Score = %.1f" % alignment.score)
 print("aliniacion:")
 print(alignment)
+
+"""
+Requerimiento 3:Traducir secuencia de ARN mensajero a proteína
+"""
+#traducir arn mensajero a proteina
+messenger_rna = Seq("AUGGCCAUUGUAAUGGGCCGCUGAAAGGGUGCCCGAUAG")
+proteina=messenger_rna.translate()
+print ("3- messenger_rna:", messenger_rna)
+print ("3- proteina:", proteina,"\n")
+
+"""
+Requerimiento 4:Traducir secuencia de ADN mensajero a proteína
+"""
+#traducir secuencia dna a proteina
+coding_dna = Seq("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG")
+proteina=coding_dna.translate()
+messenger_rna=coding_dna.transcribe()
+print ("4- coding_dna:", coding_dna)
+print ("4- proteina:", proteina,"\n")
