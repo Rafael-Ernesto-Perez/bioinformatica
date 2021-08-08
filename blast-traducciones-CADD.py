@@ -42,3 +42,18 @@ for alignment in b_record.alignments:
             print(hsp.query[0:75] + "...")
             print(hsp.match[0:75] + "...")
             print(hsp.sbjct[0:75] + "...")
+
+"""
+Requeriento 2 - Aliniar 2 secuenciAS
+"""
+seq1 = 'LIFAGKQLEDGRTLS'
+seq2 = 'QLIFAAPKQLPGRT'
+
+aligner.substitution_matrix = substitution_matrices.load("BLOSUM62")
+alignments = aligner.align(seq1, seq2)
+alignments = list(alignments)
+print("Numero de aliniamientos: %d" % len(alignments))
+alignment = alignments[0]
+print("Score = %.1f" % alignment.score)
+print("aliniacion:")
+print(alignment)
